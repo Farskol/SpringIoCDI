@@ -8,8 +8,12 @@ public class Test1 {
 
         Book book = context.getBean("book", Book.class);
         UniLibrary unitLibrary = context.getBean("uniLibrary", UniLibrary.class);
-        unitLibrary.getBook(book);
+        unitLibrary.getBook();
+        unitLibrary.addBook("Zaur", book);
+        unitLibrary.addMagazine();
 //        unitLibrary.getMagazine();
+//        unitLibrary.returnMagazine();
+//        unitLibrary.addBook();
 
         context.close();
     }
